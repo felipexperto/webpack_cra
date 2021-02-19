@@ -44,4 +44,8 @@ module.exports = {
   },
 
   plugins: [new MiniCSSExtractPlugin()],
+
+  resolve: {
+    extensions: [".js", ".jsx"],
+  }
 };
