@@ -1,7 +1,7 @@
 const path = require("path");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 let mode = "development";
@@ -22,24 +22,17 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[name].js',
-    path: __dirname + '/public/dist',
+    path: path.resolve(__dirname, 'public/dist'),
+    assetModuleFilename: "images/[hash][ext][query]",
   },
 
-  // entry: {
-  //   main: path.resolve(__dirname, './src/index.js'),
-  // },
-  // output: {
-  //   path: path.resolve(__dirname, 'public/dist'),
-  //   publicPath: '/',
-  //   filename: 'main.js'
-  // },
-
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCSSExtractPlugin(),
-    // new CleanWebpackPlugin(),
-    // new HtmlWebpackPlugin({
-    //   title: 'Hot Module Replacement',
-    // }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      title: 'Hot Module Replacement',
+    }),
   ],
 
   resolve: {
@@ -67,17 +60,15 @@ module.exports = {
     {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      use: ['babel-loader']
+      use: ['babel-loader'],
     }
     ]
   },
 
   devServer: {
-    // contentBase: './',
     contentBase: './public',
     hot: true,
     open: true,
     port: 8080,
-    // writeToDisk: true,
   }
 };
