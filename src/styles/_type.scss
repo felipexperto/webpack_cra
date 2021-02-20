@@ -1,0 +1,11 @@
+@use "variables.scss";
+
+body {
+  font-family: variables.$font-family-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

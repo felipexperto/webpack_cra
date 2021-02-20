@@ -1,6 +1,6 @@
 # webpack_cra
 
-Custom Webpack Config for React Applications.
+Custom Webpack 5 Config for React Applications.
 
 ## Dependencies & Roles
 
@@ -32,3 +32,9 @@ IE 10
 
 
 
+### Referências
+
+- https://www.taniarascia.com/how-to-use-webpack/#basic-configuration
+- https://github.com/taniarascia/webpack-boilerplate
+- https://www.youtube.com/watch?v=TOb1c39m64A&t
+- https://www.youtube.com/watch?v=X1nxTjVDYdQ

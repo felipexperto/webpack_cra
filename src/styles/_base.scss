@@ -1,0 +1,7 @@
+@use "variables.scss";
+
+:root {
+  @each $color, $value in variables.$colors {
+    --#{$color}: #{$value};
+  }
+}
