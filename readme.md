@@ -55,6 +55,15 @@ Os papéis de algumas dependências:
 4. Visite o endereço:
     - `http://localhost:8080`
 
+### **Testes**
+
+- Rodar testes unitários
+  - `npm run unit`
+
+- Exibir estatísticas de cobertura de testes unitários
+  - `npm run coverage`
+
+
 ### Referências
 
 - [Webpack Docs](https://jestjs.io/docs/en/webpack)
