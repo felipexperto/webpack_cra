@@ -13,9 +13,13 @@
     "watch": "webpack --watch",
     "clean": "rm -rf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "webpack",
+    "webpack 5",
+    "webpack boilerplate"
+  ],
+  "author": "felipexperto",
+  "license": "MIT",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
